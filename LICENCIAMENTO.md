@@ -1,3 +1,7 @@
-# Licença MIT
+**Language:** **English** | [Português (Brasil)](LICENCIAMENTO.pt-BR.md)
 
-Código e documentação publicados sob a [licença MIT](LICENSE), desde que sua titularidade tenha sido confirmada pelo responsável. A licença não autoriza o uso da identidade visual Fincraft/Wavern nem dispensa revisão fiscal, proteção de dados e respeito a licenças de terceiros.
+# License and brand
+
+Read the `LICENSE` file for the software license, if the repository has an approved and published license file. The Fincraft and Wavern names and visual identity remain the property of their respective owners.
+
+Third-party components may have separate terms. Refer to the project dependencies and their licenses when redistributing software.

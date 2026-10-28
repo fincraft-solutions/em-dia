@@ -1,9 +1,9 @@
-# Estado de validação — Em Dia
+**Language:** **English** | [Português (Brasil)](STATUS.pt-BR.md)
 
-**Em 28/10/2026:** protótipo. A documentação recebida relata testes locais com dependências simuladas, mas os testes TypeScript **não puderam ser reproduzidos neste ambiente** (Node 22.16, abaixo do mínimo usado no CI de 22.20). O workflow do GitHub Actions executará `npm ci`, `npm run typecheck` e `npm test` após a publicação.
+# Project status
 
-Prazos e parâmetros fiscais precisam de verificação; envio de e-mail real é opt-in, com configuração e autorização dos destinatários.
+Em Dia is available as a public developer preview. The examples in this repository are designed for learning, integration experiments and collaboration. The actual behavior depends on the input and configuration.
 
-Sem teste externo com chave real, sem verificação operacional/fiscal ponta a ponta. Reavalie os parâmetros e regulamentos por competência antes do uso em produção.
+The sample parameters are illustrative. Production calendars, recipients and credentials require configuration for the business using the tool.
 
-Veja [detalhes técnicos](docs/DETALHES-TECNICOS.md) e [testes do projeto](test/).
+[Getting started](README.md) · [Technical guide](docs/en/guide.md)

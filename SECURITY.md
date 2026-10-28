@@ -1,3 +1,7 @@
-# Segurança e dados
+**Language:** **English** | [Português (Brasil)](SECURITY.pt-BR.md)
 
-Não compartilhe arquivos com dados de clientes em issues, PRs ou exemplos. Nunca suba `.env`, chaves de APIs, credenciais ou saídas operacionais. Exemplos públicos devem ser sintéticos. Para vulnerabilidades, contate os responsáveis pela organização por um canal privado, em vez de abrir uma issue contendo detalhes exploráveis.
+# Security
+
+Please keep customer records, financial statements, private tax documents, credentials and API keys out of issues and pull requests. Reproduce problems with fabricated data wherever possible.
+
+For a security vulnerability, contact the maintainers privately through an appropriate organization contact channel before publishing details. Do not include exploitable details in a public issue.

@@ -1,44 +1,45 @@
+**Language:** **English** | [Português (Brasil)](README.pt-BR.md)
+
 # Em Dia
 
 ```text
-   ___  __________
-  |   ||   _____ /   FINCRAFT
-  |___||  |____/    OPEN LAB
-       |  |
-       |__|
+   ___
+  | __|   FINCRAFT / EM-DIA
+  | _|
+  |_|
 ```
 
-**Uma fila fiscal precisa ser legível antes de ser automatizada.**
+**Keep every obligation on the radar.**
 
+Em Dia turns a small-business portfolio into a working queue of upcoming obligations. It checks dates, prepares reviewable reminders, and can draft outgoing messages. The sample run gives you the complete flow on local data.
 
-O Em Dia lê uma carteira de demonstração, aplica regras de pendência e prepara uma fila para revisão. Também consegue redigir mensagens, mas **não dispara e-mail na demonstração padrão**: primeiro você enxerga o que aconteceria.
+## Try it
 
-> **Estado:** protótipo. Parâmetros e prazos fiscais dos exemplos não estão homologados para uso operacional.
-
-## Rode sem credenciais, sem envio e sem IA
+Requires Node.js 22.20 or newer. Clone the repository and run:
 
 ```bash
-# Node.js 22.20+
 npm ci
-npm run typecheck
-npm test
 npm run rodar -- exemplos/carteira.json --sem-ia --hoje 2026-10-24
 ```
 
-O que observar: `saida/fila-2026-10-24.md` (visão para revisão) e `saida/envios-2026-10-24.json` (registro da simulação). Os e-mails gerados localmente ficam em `saida/emails/`. Os arquivos de entrada são **fictícios**.
+Open `saida/fila-2026-10-24.md` for the review queue and `saida/envios-2026-10-24.json` for the dry-run log. The sample uses fictional companies and does not send email.
 
-## Três decisões deliberadas
+## What's inside
 
-- **Regras primeiro.** A detecção de pendências é determinística; IA é opcional apenas para a redação.
-- **Envio é escolha explícita.** O provedor padrão é `console`; envio real exige configuração, `--enviar`, destinatários autorizados e conferência dos parâmetros.
-- **Contador no circuito.** A fila expõe o que está pendente e o que precisa de atenção, em vez de encerrar um processo fiscal automaticamente.
+- **Portfolio view.** Loads a list of companies and relevant dates.
+- **Rule-based queue.** Flags upcoming work using locally configured parameters.
+- **Ready for review.** Produces a Markdown queue and message drafts.
 
-Leia [`src/carteira.ts`](src/carteira.ts), os [dados de parâmetros](dados/parametros.json) e as [skills de configuração](.claude/skills/) para entender as fronteiras.
+## Explore the code
 
-## Onde não usar ainda
+[Example portfolio](exemplos/carteira.json) · [Rules](src/regras.ts) · [Scheduling example](exemplos/agendamento-github-actions.yml) · [Technical guide](docs/en/guide.md)
 
-Não confunda a execução de demonstração com controle de obrigações reais. A atualização de calendários, as regras aplicáveis e o consentimento dos destinatários são responsabilidades de implantação. O exemplo de agendamento em [`exemplos/`](exemplos/) é apenas um ponto de partida, não uma automação já ativada.
+## Extend it
 
-**Continue por:** [detalhes técnicos](docs/DETALHES-TECNICOS.md) · [limites](STATUS.md) · [como contribuir](CONTRIBUTING.md) · [versões](CHANGELOG.md) · [licença](LICENCIAMENTO.md).
+For real email delivery, configure a sender and explicitly enable the sending path. The default workflow is designed for local review.
 
-Projeto da [Fincraft](https://github.com/fincraft-solutions). Não use listas reais de clientes em issues ou exemplos públicos.
+## Project notes
+
+The sample parameters are illustrative. Production calendars, recipients and credentials require configuration for the business using the tool.
+
+[Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Fincraft](https://github.com/fincraft-solutions)

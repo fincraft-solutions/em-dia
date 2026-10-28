@@ -1,8 +1,11 @@
-# Histórico de alterações
+**Language:** **English** | [Português (Brasil)](CHANGELOG.pt-BR.md)
 
-## Não lançado
+# Changelog
 
-- Separação de `em-dia` em repositório independente, preservando código e testes do pacote de origem.
-- README público com exemplo curto, status e limites.
+## Unreleased
 
-> O primeiro release será `v0.1.0` **somente após** CI e revisão da licença. Não há release publicado automaticamente.
+- Independent public repository with example workflows and source code.
+- English and Brazilian Portuguese documentation.
+- Focused getting-started instructions and a consistent Fincraft signature.
+
+See [Releases](https://github.com/fincraft-solutions/em-dia/releases) for published versions.

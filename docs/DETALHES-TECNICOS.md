@@ -1,3 +1,5 @@
+> Language: [English](en/guide.md) | [Português (Brasil)](pt-BR/guide.md)
+
 # Em Dia
 
 Checagem mensal de pendências fiscais de MEI e Simples Nacional. Para cada empresa, avisa por e-mail o que vence e o que está faltando. Para o contador, monta uma fila única da carteira, da pendência mais urgente para a menos urgente.
