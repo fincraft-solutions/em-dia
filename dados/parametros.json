@@ -1,0 +1,33 @@
+{
+  "_aviso": "Prazos e limites a validar contra a LC 123/2006, a LC 238/2026 e a Resolução CGSN 140/2018 antes de publicar. A prorrogação do vencimento do DAS para o próximo dia útil (fim de semana e feriados) também está a validar; a lista de feriados só tem os nacionais de data fixa (faltam Carnaval, Sexta-feira Santa, Corpus Christi e feriados locais).",
+  "verificado_em": null,
+  "diaVencimentoDas": 20,
+  "feriadosNacionais": [
+    "01-01",
+    "04-21",
+    "05-01",
+    "09-07",
+    "10-12",
+    "11-02",
+    "11-15",
+    "11-20",
+    "12-25"
+  ],
+  "prazoDasnSimei": "05-31",
+  "prazoDefis": "03-31",
+  "_limitesMei": "Limite do MEI por ano-calendário (vale a maior chave ≤ ano). 2018: LC 155/2016. 2027: LC 238/2026, art. 2º. 2028 em diante: LC 123, art. 18-A, §§ 1º e 2º, com a redação da LC 238/2026 (art. 10, I).",
+  "limitesMei": {
+    "2018": { "anual": 81000, "mensalProporcional": 6750 },
+    "2027": { "anual": 110000, "mensalProporcional": 9166.67 },
+    "2028": { "anual": 140000, "mensalProporcional": 11666.67 }
+  },
+  "sublimiteIcmsIss": 3600000,
+  "limiteSimples": 4800000,
+  "limiteFatorR": 0.28,
+  "faixaAlertaFatorR": [
+    0.25,
+    0.31
+  ],
+  "alertaTetoPercentual": 0.8,
+  "diasAvisoPrazo": 10
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@wavern/em-dia",
+  "version": "0.1.0",
+  "description": "Em Dia: checagem mensal de pendências fiscais de MEI e Simples Nacional, com aviso por e-mail e fila do contador.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "scripts": {
+    "rodar": "node --env-file-if-exists=.env src/cli.ts",
+    "testar-remetente": "node --env-file-if-exists=.env src/testar-remetente.ts",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}

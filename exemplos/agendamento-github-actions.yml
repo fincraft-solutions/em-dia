@@ -1,0 +1,58 @@
+# Modelo de agendamento. Copie para .github/workflows/em-dia.yml no repositório do agente.
+name: Em Dia (checagem mensal)
+
+on:
+  schedule:
+    - cron: "0 12 10 * *" # dia 10, 12h UTC (9h de Brasília)
+  workflow_dispatch:
+    inputs:
+      enviar:
+        description: "Enviar de verdade? (false = simulação)"
+        type: boolean
+        default: false
+
+jobs:
+  rodar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+      # Troque pelo comando que exporta a carteira do Wavern para /tmp/carteira.json (skill conectar-dados).
+      # Falha de propósito até ser configurado, para o agendamento nunca rodar com a carteira de exemplo.
+      - name: Gerar carteira
+        run: |
+          echo "Configure a exportação da carteira neste passo." >&2
+          exit 1
+
+      - name: Rodar Em Dia
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EM_DIA_EMAIL_PROVEDOR: resend
+          EM_DIA_REMETENTE_EMAIL: ${{ vars.EM_DIA_REMETENTE_EMAIL }}
+          EM_DIA_REMETENTE_NOME: ${{ vars.EM_DIA_REMETENTE_NOME }}
+          EM_DIA_RESPONDER_PARA: ${{ vars.EM_DIA_RESPONDER_PARA }}
+          EM_DIA_LINK_DESCADASTRO: ${{ vars.EM_DIA_LINK_DESCADASTRO }}
+          EM_DIA_ASSINATURA: ${{ vars.EM_DIA_ASSINATURA }}
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.enviar }}" = "true" ]; then
+            npm run rodar -- /tmp/carteira.json --enviar
+          else
+            npm run rodar -- /tmp/carteira.json
+          fi
+
+      # Só a fila e o registro de envios; os e-mails têm dados pessoais e não devem virar artefato.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: em-dia-saida
+          path: |
+            saida/fila-*.md
+            saida/envios-*.json
+          retention-days: 7

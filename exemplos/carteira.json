@@ -1,0 +1,129 @@
+{
+  "contador": {
+    "nome": "Contadora Exemplo",
+    "email": "contadora@example.com",
+    "escritorio": "Escritório Fictício"
+  },
+  "empresas": [
+    {
+      "cnpj": "00.000.000/0001-11",
+      "razaoSocial": "Exemplo Fictício Bolos MEI",
+      "regime": "MEI",
+      "contato": {
+        "nome": "Ana Exemplo",
+        "email": "ana@example.com"
+      },
+      "dataAbertura": "2022-05-03",
+      "receitas": {
+        "2026-01": 6100,
+        "2026-02": 6400,
+        "2026-03": 7000,
+        "2026-04": 6900,
+        "2026-05": 7300,
+        "2026-06": 7200,
+        "2026-07": 7100,
+        "2026-08": 9600,
+        "2026-09": 9800
+      },
+      "dasPagos": [
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08"
+      ],
+      "notasRegistradas": {
+        "2026-01": 12,
+        "2026-02": 10,
+        "2026-03": 14,
+        "2026-04": 11,
+        "2026-05": 13,
+        "2026-06": 12,
+        "2026-07": 0,
+        "2026-08": 15,
+        "2026-09": 16
+      },
+      "ultimaDeclaracaoEntregue": 2025
+    },
+    {
+      "cnpj": "00.000.000/0001-12",
+      "razaoSocial": "Exemplo Fictício Design Ltda",
+      "regime": "SIMPLES",
+      "contato": {
+        "nome": "Bruno Exemplo",
+        "email": "bruno@example.com"
+      },
+      "atividade": "servico_fator_r",
+      "rbt12": 420000,
+      "folha12": 113400,
+      "receitas": {
+        "2026-07": 36000,
+        "2026-08": 35000,
+        "2026-09": 34000
+      },
+      "dasPagos": [
+        "2026-07",
+        "2026-08",
+        "2026-09"
+      ],
+      "ultimaDeclaracaoEntregue": 2024
+    },
+    {
+      "cnpj": "00.000.000/0001-13",
+      "razaoSocial": "Exemplo Fictício Jardinagem MEI",
+      "regime": "MEI",
+      "contato": {
+        "nome": "Carla Exemplo",
+        "email": "carla@example.com"
+      },
+      "dataAbertura": "2021-02-10",
+      "receitas": {
+        "2026-07": 4100,
+        "2026-08": 3900,
+        "2026-09": 4300
+      },
+      "dasPagos": [
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09"
+      ],
+      "ultimaDeclaracaoEntregue": 2025
+    },
+    {
+      "cnpj": "00.000.000/0001-14",
+      "razaoSocial": "Exemplo Fictício Materiais Ltda",
+      "regime": "SIMPLES",
+      "contato": {
+        "nome": "Diego Exemplo",
+        "email": "diego@example.com"
+      },
+      "atividade": "comercio",
+      "rbt12": 3050000,
+      "receitas": {
+        "2026-07": 260000,
+        "2026-08": 255000,
+        "2026-09": 270000
+      },
+      "dasPagos": [
+        "2026-07",
+        "2026-08"
+      ],
+      "ultimaDeclaracaoEntregue": 2025
+    }
+  ]
+}
